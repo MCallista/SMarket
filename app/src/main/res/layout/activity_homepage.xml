@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5DBB63"
+    android:background="@drawable/smarketbg"
     tools:context=".HomepageAct">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="413dp"
         android:layout_height="75dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,22 +22,105 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center|top"
         android:orientation="vertical"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/smarketTitle"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="179dp"
+            app:srcCompat="@drawable/smarkettitle" />
+
+        <SearchView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:text="WELCOME TO SMARKET!"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <Button
+                android:id="@+id/cart"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Cart"
+                android:textColor="#474747"
+                android:textSize="8sp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/shops"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Shops"
+                android:textColor="#474747"
+                android:textSize="8sp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/product"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Product"
+                android:textColor="#474747"
+                android:textSize="8sp"
+                android:backgroundTint="@color/white"/>
+
+            <Button
+                android:id="@+id/promo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="Promo"
+                android:textColor="#474747"
+                android:textSize="8sp"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="(Gambar Promo)" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:text="(Gambar Promo)" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
